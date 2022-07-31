@@ -12,4 +12,6 @@ mod basic {
 }
 
 #[derive(Accounts)]
-pub struct Init {}
+pub struct Init<'info> {
+    pub user: Signer<'info>,
+}
